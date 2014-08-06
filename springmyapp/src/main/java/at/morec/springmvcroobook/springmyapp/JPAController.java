@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 /**
@@ -17,6 +18,7 @@ import javax.validation.Valid;
 public class JPAController {
 
   private static final String JPA_MESSAGE = "jpaMessage";
+  private static final String FIND = "find";
 
   @RequestMapping(value = "/jpa", method = RequestMethod.GET)
   public String jpa(Model model) {
@@ -69,4 +71,27 @@ public class JPAController {
     myDataRepository.delete(id);
     return "redirect:/jpa";
   }
+
+  @RequestMapping(value = "/find", method = RequestMethod.GET)
+  public String find(Model model) {
+    model.addAttribute("title", "JPA Sample[SEARCH]");
+    model.addAttribute("message", "検索のページ");
+
+    MyDataRepository<MyData> myDataRepository = new MyDataRepositoryImpl();
+    model.addAttribute("dataList", myDataRepository.getAll());
+
+    return FIND;
+  }
+
+  @RequestMapping(value = "/find", method = RequestMethod.POST)
+  public String search(HttpServletRequest request, Model model) {
+    String fstr = request.getParameter("fstr");
+    model.addAttribute("title", "JPA Sample[SEARCH RESULT]");
+    model.addAttribute("message", fstr + " の検索結果");
+
+    MyDataRepository<MyData> myDataRepository = new MyDataRepositoryImpl();
+    model.addAttribute("dataList", myDataRepository.find(fstr));
+    return FIND;
+  }
+
 }

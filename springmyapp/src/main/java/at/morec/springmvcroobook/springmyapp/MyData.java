@@ -5,11 +5,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
  * @author tanabe
  */
+@NamedQuery(
+  name = "find",
+  query = "from MyData where id = :fid or name like :fname or mail like :fmail"
+)
 @Entity
 @Table(name = "mydata")
 public class MyData {

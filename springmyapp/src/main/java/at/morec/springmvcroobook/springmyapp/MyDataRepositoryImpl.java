@@ -4,7 +4,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.List;
 
 /**
@@ -16,10 +18,17 @@ public class MyDataRepositoryImpl implements MyDataRepository<MyData> {
 
   public List<MyData> getAll() {
     EntityManager em = getEntityManager();
-    TypedQuery<MyData> query = em.createQuery("from MyData", MyData.class);
-    List<MyData> list = query.getResultList();
-    em.close();
-    return list;
+
+    CriteriaBuilder builder = em.getCriteriaBuilder();
+    CriteriaQuery<MyData> query = builder.createQuery(MyData.class);
+    Root<MyData> root = query.from(MyData.class);
+
+    query.select(root).orderBy(builder.asc(root.get("name")));
+
+    return em.createQuery(query)
+//              .setFirstResult(5)
+//              .setMaxResults(5)
+              .getResultList();
   }
 
   @Override
@@ -68,6 +77,25 @@ public class MyDataRepositoryImpl implements MyDataRepository<MyData> {
   @Override
   public void delete(long id) {
     delete(findById(id));
+  }
+
+  @Override
+  public List<MyData> find(String fstr) {
+    Long fid = 0L;
+    try {
+      fid = Long.parseLong(fstr);
+    } catch (NumberFormatException e) {}
+
+    EntityManager em = getEntityManager();
+    CriteriaBuilder builder = em.getCriteriaBuilder();
+    CriteriaQuery<MyData> query = builder.createQuery(MyData.class);
+    Root<MyData> root = query.from(MyData.class);
+
+    query
+      .select(root)
+      .where(builder.equal(root.get("name"), fstr));
+
+    return em.createQuery(query).getResultList();
   }
 
   private static EntityManager getEntityManager() {

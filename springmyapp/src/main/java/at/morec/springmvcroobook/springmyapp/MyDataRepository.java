@@ -14,5 +14,6 @@ public interface MyDataRepository <T> {
   void update(T data);
   void delete(T data);
   void delete(long id);
+  List<T> find(String fstr);
 
 }
