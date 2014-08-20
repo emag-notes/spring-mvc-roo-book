@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author tanabe
  */
-public class MyDataRepositoryImpl implements MyDataRepository<MyData> {
+public class MyDataDAOImpl implements MyDataDAO<MyData> {
 
   private static EntityManagerFactory factory = Persistence.createEntityManagerFactory("persistenceUnit");
 

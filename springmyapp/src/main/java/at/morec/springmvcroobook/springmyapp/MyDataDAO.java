@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @author tanabe
  */
-public interface MyDataRepository <T> {
+public interface MyDataDAO<T> {
 
   List<T> getAll();
   T findById(long id);
