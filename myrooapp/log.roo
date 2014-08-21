@@ -8,3 +8,7 @@ persistence setup --provider HIBERNATE --database H2_IN_MEMORY
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 11:40:35
 quit
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-21 11:40:39
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 11:41:24
+web mvc controller --class at.morec.springmvcroobook.myrooapp.HelloController --preferredMapping /hello
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-21 11:42:26
