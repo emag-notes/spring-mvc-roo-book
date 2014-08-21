@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_at_morec_springmvcroobook_myrooapp_mydata_MyData" modelAttribute="myData" path="/mydatas" versionField="Version" z="FrV0ZoIert64QRV348aHRfnCPjs=">
+        <field:input field="name" id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_name" required="true" z="2bEGzXAZSq4oE+S6qBVnjL7CVDI="/>
+        <field:input field="mail" id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_mail" required="true" z="BRFbgSlHKdiLK7jfhLty+2mDO2s="/>
+        <field:input field="age" id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_age" validationMessageCode="field_invalid_integer" z="whh6Jn3ksNsPWuKaQqA2SVtDwBs="/>
+        <field:input field="memo" id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_memo" z="jwG76sZ/mpd3Jja7HmquztkYLXs="/>
+    </form:update>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_at_morec_springmvcroobook_myrooapp_mydata_MyData" items="${mydatas}" z="umVm5Ino5ZbPB5DHXHlMbGRSF/k=">
+        <table:table data="${mydatas}" id="l_at_morec_springmvcroobook_myrooapp_mydata_MyData" path="/mydatas" z="zXIhfho5hBNe9aOjvkhbsaEq4PI=">
+            <table:column id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_name" property="name" z="ct/mVbsvB3F2XbSh5DyOve8inu0="/>
+            <table:column id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_mail" property="mail" z="pQpodii0lT0fkyxrKZT++yenBt0="/>
+            <table:column id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_age" property="age" z="0pxNjAqQjUJkqDe9vzAoQVf180o="/>
+            <table:column id="c_at_morec_springmvcroobook_myrooapp_mydata_MyData_memo" property="memo" z="aLK9PptybipkS2zVnTA+mdDlF2M="/>
+        </table:table>
+    </page:list>
+</div>

@@ -12,3 +12,12 @@ quit
 web mvc controller --class at.morec.springmvcroobook.myrooapp.HelloController --preferredMapping /hello
 quit
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-21 11:42:26
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 15:21:13
+entity jpa --class ~.mydata.MyData --testAutomatically 
+field string --fieldName name --notNull 
+field string --fieldName mail --notNull 
+field number --fieldName age --type java.lang.Integer
+field string --fieldName memo
+web mvc all --package at.morec.springmvcroobook.myrooapp.mydata
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 15:39:32
+finder list --class ~.mydata.MyData

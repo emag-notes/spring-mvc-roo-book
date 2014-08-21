@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_at_morec_springmvcroobook_myrooapp_mydata_MyData" object="${mydata}" path="/mydatas" z="HA++dUyQZ3+xJfona2Y88CeQG/8=">
+        <field:display field="name" id="s_at_morec_springmvcroobook_myrooapp_mydata_MyData_name" object="${mydata}" z="KqroacHNQl1GAFAYl7Zk1cgcMAU="/>
+        <field:display field="mail" id="s_at_morec_springmvcroobook_myrooapp_mydata_MyData_mail" object="${mydata}" z="GQT96QhoN0mBd6HQXgKA4YsP5YE="/>
+        <field:display field="age" id="s_at_morec_springmvcroobook_myrooapp_mydata_MyData_age" object="${mydata}" z="2pqgpnvoDUnx43icYiJgiUrax+Y="/>
+        <field:display field="memo" id="s_at_morec_springmvcroobook_myrooapp_mydata_MyData_memo" object="${mydata}" z="KNASKMJ6rULBHvfyTJePPpxIXdg="/>
+    </page:show>
+</div>
