@@ -3,3 +3,8 @@ project --topLevelPackage at.morec.springmvcroobook.myrooapp
 web mvc setup
 quit
 // Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-21 10:31:40
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 11:23:25
+persistence setup --provider HIBERNATE --database H2_IN_MEMORY 
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-08-21 11:40:35
+quit
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-08-21 11:40:39
